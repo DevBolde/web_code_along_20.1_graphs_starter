@@ -1,5 +1,6 @@
 function traverse(graph, root) {
     // Implement
+    
 }
 
 // Implement a breadth-first traversal (BFT) for a graph.
@@ -22,3 +23,22 @@ const graph = { 1: [2, 5], 2: [1, 4, 5], 3: [5], 4: [2], 5: [1, 2, 3] }
 console.log(traverse(graph, 1)) // 1, 2, 5, 4, 3
 console.log(traverse(graph, 4)) // 4, 2, 1, 5, 3
 console.log(traverse(graph, 5)) // 5, 1, 2, 3, 4
+/*
+      6
+    / \
+    3  9
+
+Plan:
+1: initialize an empty value list and empty queue
+  values = [4, 2, 1, 5, 3 ]
+  queue = [ ]
+    visited = {4, 2, 1, 5, 3  }
+2: enqueue the input root inside the queue and mark it visited
+
+3: while we have values inside the queue start serving these values
+by serving we mean 2 steps
+ a) dequeue the queue and push the current node to the values list
+  b) enqueue the neighbors to the queue (if its not already marked visited mark as visited and add it to queue)
+
+  4: once the queue is empty return the values list
+*/
